@@ -1,0 +1,5 @@
+node_modules
+result.jpg
+*.jpg
+*.exe
+!model/**
