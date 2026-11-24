@@ -15,9 +15,10 @@ const LABELS_PATH = process.env.LABELS_PATH || path.join(__dirname, 'model', 'la
 const LOW_CONFIDENCE = parseFloat(process.env.LOW_CONFIDENCE || '0.7');
 
 // Thresholds to reject photos that are not millet
+// Real millet grain photos have high texture (~15 to 30), whereas faces, skin, rooms, walls are < 5.
 const MIN_CONFIDENCE = parseFloat(process.env.MIN_CONFIDENCE || '0.90');
 const MIN_LOGIT      = parseFloat(process.env.MIN_LOGIT || '0');
-const MIN_TEXTURE    = parseFloat(process.env.MIN_TEXTURE || '0');
+const MIN_TEXTURE    = parseFloat(process.env.MIN_TEXTURE || '9.0');
 
 // Millets whose fungus mask was trained on enough annotated images to trust the percentage.
 // Update this list after round 2 (more masks for kodo/little/pearl).

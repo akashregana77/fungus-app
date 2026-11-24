@@ -13,4 +13,4 @@ services:
       - key: MIN_LOGIT
         value: 0
       - key: MIN_TEXTURE
-        value: 0
+        value: 9.0
